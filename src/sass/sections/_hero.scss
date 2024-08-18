@@ -29,37 +29,29 @@
     padding: 0rem $default-font-size;
   }
 
+  .hero-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 상단, 중앙, 하단 정렬 */
+    height: 33.33vh; /* 이미지와 동일한 높이 설정 */
+    width: auto; /* 이미지와 동일한 너비 설정 */
+  }
+
   .hero-title-image {
-    margin-bottom: 10rem; /* 텍스트와 이미지 사이에 여백을 추가 */
-    margin-top: 10rem; /* 텍스트와 이미지 사이에 여백을 추가 */
+    margin-right: 5rem; /* 텍스트와 이미지 사이에 여백을 추가 */
+    img {
+      height: 40vh; /* 이미지 높이를 페이지 높이의 1/3로 설정 */
+      width: auto; /* 이미지의 가로 비율을 유지 */
+      object-fit: contain; /* 이미지가 주어진 공간에 맞도록 조정 */
+    }
+
   }
 
   .hero-title {
-    font-size: 5.6rem;
-    font-weight: 700;
-    margin-bottom: 3.2rem;
-    text-align: center;
-
-    @include respond(tab-land) {
-      font-size: 4rem;
-    }
-    @include respond(tab-port) {
-      font-size: 3.6rem;
-      text-align: center;
-    }
-    @include respond(phone) {
-      font-size: 3.5rem;
-      line-height: 1.5;
-    }
-    @include respond(phone-xs) {
-      font-size: 2.8rem;
-    }
-  }
-  .hero-body {
     font-size: 4.2rem;
     font-weight: 525;
-    margin-bottom: 2.4rem;
     text-align: left;
+    margin-bottom: 2rem; /* 텍스트와 이미지 사이에 여백을 추가 */
 
     @include respond(tab-land) {
       font-size: 3rem;
@@ -74,6 +66,27 @@
     }
     @include respond(phone-xs) {
       font-size: 2.1rem;
+    }
+  }
+
+  .hero-body {
+    font-size: 2.8rem;
+    font-weight: 525;
+    text-align: left;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    @include respond(phone) {
+      font-size: 1.7rem;
+      line-height: 1.0;
+    }
+    @include respond(phone-xs) {
+      font-size: 1.4rem;
     }
   }
 
