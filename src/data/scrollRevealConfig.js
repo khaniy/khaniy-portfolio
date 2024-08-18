@@ -23,6 +23,20 @@ export const targetElements = [
     },
   },
   {
+    element: ".hero-title-image",
+    animation: {
+      delay: 500,
+      origin: window.innerWidth > 768 ? "left" : "bottom",
+    },
+  },
+  {
+    element: ".hero-body",
+    animation: {
+      delay: 500,
+      origin: window.innerWidth > 768 ? "left" : "bottom",
+    },
+  },
+  {
     element: ".hero-cta",
     animation: {
       delay: 1000,
